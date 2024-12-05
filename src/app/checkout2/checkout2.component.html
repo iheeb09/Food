@@ -1,0 +1,12 @@
+<div class="container py-5">
+    <h1 class="mb-4 text-center">Your Cart</h1>
+    <div class="row">
+        
+        <div class="alert alert-success" *ngIf="test">
+            <h3>Votre Command est enregistée avec succés</h3>
+        </div>
+        <h4 *ngIf="!test" >CDE a afficher</h4>
+        <button class="btn btn-primary"(click)="finaliser()" > Finaliser</button>
+
+    </div>
+</div>

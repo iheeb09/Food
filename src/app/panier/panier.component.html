@@ -1,0 +1,57 @@
+
+
+    <!-- Cart Section -->
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Mon Panier</h1>
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-md-8"  *ngFor="let item of carts ; let i=index">
+
+
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="data:image/png;base64,{{item.image}}" class="img-fluid rounded-start" alt="Item">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.titre }}</h5>
+                                <p class="card-text">{{ item.prix  }} dt</p>
+                                <div class="input-group w-50">
+                                    <button class="btn btn-outline-secondary" type="button">-</button>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <button class="btn btn-outline-secondary" type="button">+</button>
+                                </div>
+                                <button class="btn btn-danger btn-sm mt-2" (click)="delete(i)">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+
+            <!-- Summary -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Order Summary</h5>
+                        <hr>
+                       
+                        <p class="d-flex justify-content-between">
+                            <span>Delivery Fee</span>
+                            <span>$5.00</span>
+                        </p>
+                        <hr>
+                        <h5 class="d-flex justify-content-between">
+                            <span>Total</span>
+                            <span>{{total}} dt</span>
+                        </h5>
+                        <button class="btn btn-primary w-100 mt-3" routerLink="/checkout" >Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  

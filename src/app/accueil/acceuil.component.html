@@ -1,0 +1,23 @@
+ <!-- Categories -->
+ <div id="categories" class="container py-5">
+    <h2 class="text-center mb-4">Restaurants</h2>
+    <div class="row">
+
+
+
+        <div class="col-md-3"  *ngFor="let r of rest">
+            <div class="card">
+                <img src="data:image/png;base64,{{r.image}}" class="card-img-top" >
+                <div class="card-body">
+                    <h5 class="card-title">{{r.titre}}</h5>
+                    <p class="card-text">{{r.specialite}}</p>
+                    <a routerLink="/restaurant/{{r.id}}" class="btn btn-outline-primary" >Menu</a>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    </div>
+ </div>       
+
